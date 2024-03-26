@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+    
+  <meta charset='UTF-8'>
+  <title>Frutta del culo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/mubangadv/pen/YzKGGaL">
+
+  
+  
+
+  <style id="INLINE_PEN_STYLESHEET_ID">
+    @import url("https://fonts.googleapis.com/css?family=Red+Hat+Display:400,900&display=swap");
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #4B4168;
+  color: #333;
+}
+
+.center {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.top3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #4B4168;
+}
+.top3 .item {
+  box-sizing: border-box;
+  position: relative;
+  background: white;
+  width: 9rem;
+  height: 10rem;
+  text-align: center;
+  padding: 2.8rem 0 0;
+  margin: 1rem 1rem 2rem;
+  border-radius: 0.5rem;
+  transform-origin: bottom;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.1), 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+.top3 .item .pic {
+  position: absolute;
+  top: -2rem;
+  left: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2), 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.3);
+}
+.top3 .item .pos {
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.top3 .item .name {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.top3 .item .score {
+  opacity: 0.5;
+}
+.top3 .item .score:after {
+  display: block;
+  
+  opacity: 0.5;
+}
+.top3 .item.one {
+  width: 10rem;
+  height: 11rem;
+  padding-top: 3.5rem;
+}
+.top3 .item.one .pic {
+  width: 5rem;
+  height: 5rem;
+  left: 2.5rem;
+}
+.top3 .item:hover {
+  transform: scale(1.05);
+}
+
+.list {
+  padding-left: 2rem;
+  margin: 0 auto;
+}
+.list .item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  height: 3rem;
+  border-radius: 4rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(142deg, #fc46a8  0%,  #3fa1fb 100%);
+  transform-origin: left;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.1), 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+.list .item .pos {
+  font-weight: 900;
+  position: absolute;
+  left: -2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  width: 1.5rem;
+  color: white;
+  opacity: 0.6;
+  transition: opacity 200ms ease-in-out;
+}
+.list .item .pic {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2), 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.3);
+}
+.list .item .name {
+  flex-grow: 2;
+  flex-basis: 10rem;
+  font-size: 1.1rem;
+}
+.list .item .score {
+  margin-right: 1.5rem;
+  opacity: 0.8;
+}
+.list .item .score:after {
+  margin-right: 1rem;
+
+  opacity: 0.5;
+}
+.list .item:hover {
+  transform: scale(1.05);
+}
+.list .item:hover .pos {
+  opacity: 0.8;
+}
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700;900&display=swap");
+body {
+  font-family: "Exo 2", sans-serif;
+  background: #3fa1fb;
+  background: linear-gradient(142deg, #3fa1fb 0%, #fc46a8 100%);
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(50vh - 2rem);
+  position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
+left: -30%;
+}
+
+.header2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(50vh - 2rem);
+  position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
+right: -33%;
+}
+.title-wrapper {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  transform: skew(0, -10deg);
+}
+
+.top-title {
+  order: 1;
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+}
+
+.bottom-title {
+  order: 3;
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  margin-top: 2rem;
+  padding-left: 2rem;
+}
+
+.sweet-title {
+  order: 2;
+  color: #fde9ff;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(3rem, 10vw, 6rem);
+  line-height: 0.75em;
+  text-align: center;
+  text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff, 5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
+}
+.sweet-title span {
+  display: block;
+  position: relative;
+}
+.sweet-title span:before {
+  content: attr(data-text);
+  position: absolute;
+  text-shadow: 2px 2px 1px #e94aa1, -1px -1px 1px #c736f9, -2px 2px 1px #e94aa1, 1px -1px 1px #f736f9;
+  z-index: 1;
+}
+.sweet-title span:nth-child(1) {
+  padding-right: 2.25rem;
+}
+.sweet-title span:nth-child(2) {
+  padding-left: 2.25rem;
+}
+
+.disclaimer {
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  color: #fff;
+}
+.disclaimer a {
+  color: #fff;
+}
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+
+<body>
+    
+
+    <section class="header">
+        <divc class="title-wrapper">
+          <h1 class="sweet-title">
+            <span data-text="Frutta Del">Frutta Del</span>
+            <span data-text="Culo">Culo</span>
+          </h1>
+          <span class="top-title">We put it in</span>
+          <span class="bottom-title">Up to the surgeon to take it out!</span>
+          </div>
+      </section>
+      <section class="header2">
+        <divc class="title-wrapper">
+          <h1 class="sweet-title">
+            <span data-text="Frutta Del">Frutta Del</span>
+            <span data-text="Culo">Culo</span>
+          </h1>
+          <span class="top-title">We put it in</span>
+          <span class="bottom-title">Up to the surgeon to take it out!</span>
+          </div>
+      </section>
+  <div class="center">
+  <div class="top3" style="padding-top: 300px;">
+    <div class="two item">
+      <div class="pos">
+        2
+      </div>
+      <div class="pic" style="background-image: url(&#39;https://www.mrswages.com/wp-content/uploads/2022/11/iStock-1159797826-whole-pickles-scaled.jpg&#39;)"></div>
+      <div class="name">
+        Pickles
+      </div>
+      <div class="score">
+        Unti e smooth
+      </div>
+    </div>
+    <div class="one item">
+      <div class="pos">
+        1
+      </div>
+      <div class="pic" style="background-image: url(&#39;https://hips.hearstapps.com/hmg-prod/images/gettyimages-1301600040-658e6f835fbcd.jpg?crop=0.6672958942897593xw:1xh;center,top&resize=1200:*&#39;)"></div>
+      <div class="name">
+        Banana
+      </div>
+      <div class="score">
+        Self explanatory
+      </div>
+    </div>
+    <div class="three item">
+      <div class="pos">
+        3
+      </div>
+      <div class="pic" style="background-image: url(&#39;https://www.cicalia.com/it/img/imgproducts/50753/l_50753.jpg&#39;)"></div>
+      <div class="name">
+        Ananas
+      </div>
+      <div class="score">
+        Come esce non ci riguarda
+      </div>
+    </div>
+  </div>
+  <script>
+    const items = [
+    {
+    
+    picUrl: 'https://www.eccocibo.it/images/thumbs/0001954_pera-abate-origine-italia_510.jpeg',
+    name: 'Pera',
+    score: 'Piccola e forma utile'
+  },
+  {
+    
+    picUrl: 'https://www.samarigosa.com/wp-content/uploads/2016/07/zucchine.jpg',
+    name: 'Zucchina',
+    score: 'Ai caramba'
+  },
+  {
+    
+    picUrl: 'https://www.my-personaltrainer.it/images/hd/mela.jpg',
+    name: 'Mela',
+    score: 'Ha la cera ed e` relativamente piccola'
+  },
+  {
+    
+    picUrl: 'https://www.terramore.net/wp-content/uploads/2018/11/adobestock_178138240.jpeg',
+    name: 'Melanzana',
+    score: 'smooth but thick'
+  },
+  {
+    
+    picUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XasAsScJV5IEbSCuBmcDomhU_D1aGe3xQa8tS2kUrsX9lJKqs5Pcb_W2hmVMJHZKGJQ&usqp=CAU',
+    name: 'Butternut',
+    score: 'Forma utile but chonky'
+  },
+  {
+    
+    picUrl: 'https://healthiersteps.com/wp-content/uploads/2021/03/black-chayote-spiny.jpg',
+    name: 'Chayote',
+    score: 'Spiky'
+  },
+  {
+    
+    picUrl: 'https://www.carrefour.it/on/demandware.static/-/Sites-carrefour-master-catalog-IT/default/dw440225c1/large/Cappucciobianco_AlmaverdeBio.png',
+    name: 'Cavolo cappuccio',
+    score: 'Bro non devo spiegarlo'
+  }
+];
+
+    
+        function generateDynamicContent() {
+      const dynamicList = document.querySelector('.dynamic-list');
+
+      items.forEach((item, index) => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('item');
+
+        itemElement.innerHTML = `
+          <div class="pos">${index + 4}</div>
+          <div class="pic" style="background-image: url('${item.picUrl}')"></div>
+          <div class="name">${item.name}</div>
+          <div class="score">${item.score}</div>
+        `;
+
+        dynamicList.appendChild(itemElement);
+      });
+    }
+
+    // Run the script after the DOM content is fully loaded
+    document.addEventListener('DOMContentLoaded', generateDynamicContent);
+  </script>
+  <div class="list dynamic-list" id="here">
+    <!-- Dynamic items will be inserted here -->
+  </div>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+</body>
+
+</html>
